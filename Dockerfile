@@ -7,11 +7,11 @@ RUN wget -o /sbin/zinit https://github.com/kaspanet/kaspad/releases/download/v0.
   unzip kaspad-v0.12.17-linux.zip && \
   mv kaspad-v0.12.17-linux/bin/* /usr/local/bin
 
-RUN wget -O /sbin/zinit https://github.com/threefoldtech/zinit/releases/download/v0.2.5/zinit && \
+RUN wget https://github.com/threefoldtech/zinit/releases/download/v0.2.5/zinit && \
   chmod +x /sbin/zinit
 
 COPY zinit /etc/zinit
-COPY start.sh /start.sh
+COPY scripts/start.sh /start.sh
 
 
 RUN chmod +x /sbin/zinit && chmod +x /start.sh
