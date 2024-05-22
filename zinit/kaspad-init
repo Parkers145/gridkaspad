@@ -1,0 +1,3 @@
+exec: /scripts/kaspad-init.sh
+log: stdout
+oneshot: true
