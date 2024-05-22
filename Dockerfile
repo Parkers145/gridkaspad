@@ -1,12 +1,9 @@
 FROM ubuntu:22.04
 
 RUN apt update && \
-  apt -y install wget openssh-server unzip curl golang-go git 
-  
-
-#RUN wget https://github.com/kaspanet/kaspad/releases/download/v0.12.17/kaspad-v0.12.17-linux.zip && \
-  #unzip kaspad-v0.12.17-linux.zip 
+  apt -y install wget openssh-server uncurl gcc make git golang 
  
+
   
 RUN wget -O /sbin/zinit https://github.com/threefoldtech/zinit/releases/download/v0.2.14/zinit && \
   chmod +x /sbin/zinit
